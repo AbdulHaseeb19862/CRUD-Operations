@@ -1,3 +1,4 @@
+"use client";
 import { useGetAllProduct } from "@/Hooks/UseGetAllProduct.jsx";
 import React from "react";
 
