@@ -32,27 +32,53 @@ import { BASE_URL } from "@/lib/api.jsx";
 // };
 
 // Get All Product data
-export const fetchAllProducts = async () => {
+// export const fetchAllProducts = async () => {
+//   try {
+//     const response = await fetch(`${BASE_URL}/products`);
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.log("Error ", error);
+//   }
+// };
+
+// Get single product data
+
+// export const fetchSingleProduct = async (id) => {
+//   try {
+//     const response = await fetch(`${BASE_URL}/products/${id}`);
+//     if (!response.ok) {
+//       console.log("Failed to fetch single product");
+//     }
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.log("Errors fetch single product", error);
+//   }
+// };
+
+// Fetch all product data
+export const fetchAllProductData = async () => {
   try {
     const response = await fetch(`${BASE_URL}/products`);
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log("Error ", error);
+    console.log("Errors of Fetch all product", error);
   }
 };
 
-// Get single product data
+// Fetch Single Product Data
 
-export const fetchSingleProduct = async (id) => {
+export const fetchSingleProductData = async (id) => {
   try {
     const response = await fetch(`${BASE_URL}/products/${id}`);
     if (!response.ok) {
-      console.log("Failed to fetch single product");
+      console.log("Failed To Fetching Data");
     }
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log("Errors fetch single product", error);
+    console.log("something went wrong");
   }
 };

@@ -4,6 +4,8 @@ import GetAllProduct from "./components/getAllProduct/page.jsx";
 import GetSingleProduct from "./components/getSingleProduct/page.jsx";
 import FetchAllProducts from "./components/fetchAllProducts/page.jsx";
 import FetchSingleProduct from "./components/fetchSingleProduct/page.jsx";
+import FetchAllProductsData from "./components/fetchAllProductsData/page.jsx";
+import FetchSingleProductData from "./components/fetchSingleProductData.jsx/page.jsx";
 
 export default function Home() {
   return (
@@ -12,7 +14,9 @@ export default function Home() {
       {/* <GetAllProduct /> */}
       {/* <GetSingleProduct /> */}
       {/* <FetchAllProducts /> */}
-      <FetchSingleProduct />
+      {/* <FetchSingleProduct /> */}
+      {/* <FetchAllProductsData /> */}
+      <FetchSingleProductData />
     </>
   );
 }
