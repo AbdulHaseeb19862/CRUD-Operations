@@ -2,13 +2,17 @@
 import Image from "next/image";
 import GetAllProduct from "./components/getAllProduct/page.jsx";
 import GetSingleProduct from "./components/getSingleProduct/page.jsx";
+import FetchAllProducts from "./components/fetchAllProducts/page.jsx";
+import FetchSingleProduct from "./components/fetchSingleProduct/page.jsx";
 
 export default function Home() {
   return (
     <>
       <h1 className="text-red-800">This is tanstack query</h1>
       {/* <GetAllProduct /> */}
-      <GetSingleProduct />
+      {/* <GetSingleProduct /> */}
+      {/* <FetchAllProducts /> */}
+      <FetchSingleProduct />
     </>
   );
 }
