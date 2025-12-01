@@ -82,3 +82,25 @@ export const fetchSingleProductData = async (id) => {
     console.log("something went wrong");
   }
 };
+
+// Create Product Data
+
+export const createProductData = async (createData) => {
+  try {
+    const response = await fetch(`${BASE_URL}/products`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(createData),
+    });
+    if (!response.ok) {
+      console.logO("Failed To creating product data");
+    }
+    const data = await response.json();
+    console.log("New Product Data Created", data);
+    return data;
+  } catch (error) {
+    console.log("Error in creating product data", error);
+  }
+};
