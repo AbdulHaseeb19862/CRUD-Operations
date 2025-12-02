@@ -85,7 +85,29 @@ export const fetchSingleProductData = async (id) => {
 
 // Create Product Data
 
-export const createProductData = async (createData) => {
+// export const createProductData = async (createData) => {
+//   try {
+//     const response = await fetch(`${BASE_URL}/products`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(createData),
+//     });
+//     if (!response.ok) {
+//       console.logO("Failed To creating product data");
+//     }
+//     const data = await response.json();
+//     console.log("New Product Data Created", data);
+//     return data;
+//   } catch (error) {
+//     console.log("Error in creating product data", error);
+//   }
+// };
+
+// create new product data
+
+export const createNewProductData = async (createData) => {
   try {
     const response = await fetch(`${BASE_URL}/products`, {
       method: "POST",
@@ -94,13 +116,14 @@ export const createProductData = async (createData) => {
       },
       body: JSON.stringify(createData),
     });
+
     if (!response.ok) {
-      console.logO("Failed To creating product data");
+      console.log("Failed to create new data");
     }
     const data = await response.json();
-    console.log("New Product Data Created", data);
+    console.log("Creating New Product Data", data);
     return data;
   } catch (error) {
-    console.log("Error in creating product data", error);
+    console.log("Error in creating new product data", error);
   }
 };
