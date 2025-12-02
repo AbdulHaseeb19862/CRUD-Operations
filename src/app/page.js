@@ -8,6 +8,7 @@ import FetchAllProductsData from "./components/fetchAllProductsData/page.jsx";
 import FetchSingleProductData from "./components/fetchSingleProductData.jsx/page.jsx";
 import CreateProductData from "./components/createProductData/page.jsx";
 import CreateNewProductData from "./components/createNewProductData/page.jsx";
+import UpdateProductData from "./components/updateProductData/page.jsx";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
       {/* <FetchAllProductsData /> */}
       {/* <FetchSingleProductData /> */}
       {/* <CreateProductData /> */}
-      <CreateNewProductData />
+      {/* <CreateNewProductData /> */}
+      <UpdateProductData />
     </>
   );
 }

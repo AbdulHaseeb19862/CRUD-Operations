@@ -127,3 +127,26 @@ export const createNewProductData = async (createData) => {
     console.log("Error in creating new product data", error);
   }
 };
+
+// update product data
+
+export const updateProductData = async ({ id, updateData }) => {
+  try {
+    const response = await fetch(`${BASE_URL}/products/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updateData),
+    });
+    console.log("respnse", response);
+    if (!response.ok) {
+      console.log("Failed to updating data");
+    }
+    const data = await response.json();
+    console.log("Updating data", data);
+    return data;
+  } catch (error) {
+    console.log("Error in updated data", error);
+  }
+};
