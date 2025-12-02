@@ -150,3 +150,18 @@ export const updateProductData = async ({ id, updateData }) => {
     console.log("Error in updated data", error);
   }
 };
+
+// Delete Product Data
+export const deleteProductData = async (id) => {
+  try {
+    const response = await fetch(`${BASE_URL}/products/${id}`);
+    if (!response.ok) {
+      console.log("Failed to delete data");
+    }
+    const data = await response.json();
+    console.log("Data is deleted successfully", data);
+    return data;
+  } catch (error) {
+    console.log("Errors in delete product data", error);
+  }
+};

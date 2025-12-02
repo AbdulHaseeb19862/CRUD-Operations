@@ -1,29 +1,34 @@
-"use client";
+// "use client";
 
-import { useUpdateProductData } from "@/Hooks/UseUpdateProductData.jsx";
+// import { useUpdateProductData } from "@/Hooks/UseUpdateProductData.jsx";
 
-const UpdateProductData = () => {
-  const { mutate, isPending } = useUpdateProductData();
+// const UpdateProductData = () => {
+//   const { mutate, isLoading, isSuccess, isPending, isError } =
+//     useUpdateProductData();
 
-  const handleUpdateData = () => {
-    mutate({
-      id: 7,
-      updateData: {
-        title: "this is updated title",
-        description: "This is description of updated product data",
-      },
-    });
-  };
+//   if (isLoading) return <h1>Data is Loading ....</h1>;
+//   if (isSuccess) return <h1>Data is created successfully </h1>;
+//   if (isError) return <h1>Error occured</h1>;
 
-  return (
-    <>
-      <h3>This is Tanstack Query</h3>
+//   const handleUpdateData = () => {
+//     mutate({
+//       id: 7,
+//       updateData: {
+//         title: "this is updated title",
+//         description: "This is description of updated product data",
+//       },
+//     });
+//   };
 
-      {isPending && <h4>Updating data...</h4>}
+//   return (
+//     <>
+//       <h3>This is Tanstack Query</h3>
 
-      <button onClick={handleUpdateData}>Update Data</button>
-    </>
-  );
-};
+//       {isPending && <h4>Updating data...</h4>}
 
-export default UpdateProductData;
+//       <button onClick={handleUpdateData}>Update Data</button>
+//     </>
+//   );
+// };
+
+// export default UpdateProductData;
